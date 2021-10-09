@@ -1,0 +1,86 @@
+/* ======================= SAFENESS ======================= */
+
+.safeness {
+    margin-bottom: 150px;
+
+    &__slider {
+        position: relative;
+        max-width: 754px;
+        max-height: 501px;
+        margin: 0 auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &__slider-img {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__slider-pagination {
+        position: absolute;
+        bottom: 0;
+        left: 10px !important;
+        z-index: 1;
+        display: flex;
+        max-width: 30%;
+    }
+
+    &__slider-bullet {
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+        margin: 2px;
+        cursor: pointer;
+        background-color: #000;
+        border-radius: 100%;
+        opacity: 0.3;
+
+        &--active {
+            background-color: $color-main;
+            opacity: 1;
+        }
+    }
+
+    &__slider-descr {
+        position: absolute;
+        right: -60px;
+        bottom: -60px;
+        z-index: 1;
+        max-width: 505px;
+        padding: 20px;
+        text-align: right;
+        background: $color-main;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &__slider-text {
+        max-height: 100px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        text-overflow: clip;
+
+        p {
+            font-size: $b * 8;
+            line-height: 20 / 16 * 100%;
+        }
+    }
+
+    &__slider-link {
+        margin-top: 30px;
+        font-size: 14px;
+        transition: all 0.2s ease-in-out;
+
+        @media (min-width: $md3+px) {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+/* ======================= HEADER ======================= */
+.header {
+    margin: 40px 0;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding: 9px 0;
+        font-family: "Philosopher", sans-serif;
+        font-size: $b * 12;
+        font-weight: $fw-regular;
+        line-height: 27 / 24 * 100%;
+        transition: all 0.3s ease-in-out;
+
+        &::before {
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            content: "";
+            background-color: $color-main;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            content: "";
+            background-color: $color-main;
+            border-radius: 100%;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media (min-width: $md3+px) {
+            &:hover {
+                color: $color-main;
+
+                &::before {
+                    width: 100%;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.logo {
+    width: 137px;
+    height: 37px;
+    margin-right: 20px;
+}

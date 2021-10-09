@@ -1,0 +1,55 @@
+/* ======================= TITLE ======================= */
+.title {
+    font-family: "Philosopher", sans-serif;
+    font-weight: $fw-bold;
+    line-height: 40 / 36 * 100%;
+    text-align: center;
+
+    &__wrapper {
+        margin-bottom: 60px;
+    }
+
+    &--circle {
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            z-index: -1;
+            width: 60px;
+            height: 60px;
+            content: "";
+            background: $color-main;
+            border-radius: 100%;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    &--fs18 {
+        font-size: 9 * $b;
+    }
+
+    &--fs24 {
+        font-size: 12 * $b;
+    }
+
+    &--fs36 {
+        font-size: 18 * $b;
+    }
+
+    &--fs48 {
+        font-size: 24 * $b;
+    }
+}
+
+.subtitle {
+    display: block;
+    margin-top: 20px;
+    font-family: $philosopher;
+    font-size: $b * 9;
+    font-weight: $fw-bold;
+    line-height: 20 / 18 * 100%;
+    text-align: center;
+}

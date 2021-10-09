@@ -1,0 +1,30 @@
+// @import "libs/reset";
+@import "libs/normalize";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/pagination/pagination.scss";
+// @import "../../node_modules/swiper/modules/navigation/navigation.scss";
+@import "global/variables";
+@import "global/mixin";
+@import "global/fonts";
+// === Глобальные стили ===
+@import "global/global";
+@import "global/buttons";
+
+// === Стили Блоков ===
+@import "global/title";
+@import "blocks/decoration";
+@import "blocks/header";
+@import "blocks/counter";
+@import "blocks/form";
+@import "blocks/promo";
+@import "blocks/achievements";
+@import "blocks/safeness";
+@import "blocks/special-offer";
+@import "blocks/works";
+@import "blocks/request";
+@import "blocks/footer";
+// === / Стили Блоков ===
+
+// === Стили политики конфиденциальности ===
+// @import "global/policy";
+// === / Стили политики конфиденциальности ===

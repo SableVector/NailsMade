@@ -1,0 +1,32 @@
+/* ======================= SPECIAL-OFFER ======================= */
+.special-offer {
+    position: relative;
+    margin-bottom: 100px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__text,
+    &__counter {
+        flex: 0 1 40%;
+    }
+
+    &__text {
+        p {
+            line-height: 27 / 16 * 100%;
+            text-align: right;
+
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+
+        span {
+            font-weight: $fw-bold;
+            color: $color-main;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/* ======================= ACHIEVEMENTS ======================= */
+.achievements {
+    position: relative;
+    margin-bottom: 100px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__item {
+        flex: 0 0 23%;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    &__item-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 20px;
+        border: 3px solid $color-main;
+        border-radius: 100%;
+
+        img {
+            max-width: 60px;
+            max-height: 60px;
+        }
+    }
+
+    &__item-title {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-family: "Philosopher", sans-serif;
+        font-size: $b * 12;
+        font-weight: $fw-bold;
+        line-height: 27 / 24 * 100%;
+    }
+
+    &__item-desc {
+        font-weight: normal;
+        line-height: 20 / 16 * 100%;
+    }
+}
