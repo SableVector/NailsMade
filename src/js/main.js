@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination } from '../../node_modules/swiper/swiper.esm';
+import Burger from './modules/burgerMenu';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	});
 
+	const burger = new Burger('.burger', '.menu__list').init();
 });
 
 

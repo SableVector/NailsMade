@@ -836,11 +836,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return t;
   }
 
-  function w(e, t, s) {
+  function b(e, t, s) {
     e.style.setProperty(t, s);
   }
 
-  function b(_ref) {
+  function w(_ref) {
     var e = _ref.swiper,
         t = _ref.targetPosition,
         s = _ref.side;
@@ -1007,7 +1007,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       var g = i.slidesOffsetAfter;
       "function" == typeof g && (g = i.slidesOffsetAfter.call(e));
       var v = e.snapGrid.length,
-          b = e.slidesGrid.length;
+          w = e.slidesGrid.length;
       var C = i.spaceBetween,
           T = -m,
           S = 0,
@@ -1021,7 +1021,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         marginRight: "",
         marginBottom: "",
         marginTop: ""
-      }), i.centeredSlides && i.cssMode && (w(e.wrapperEl, "--swiper-centered-offset-before", ""), w(e.wrapperEl, "--swiper-centered-offset-after", ""));
+      }), i.centeredSlides && i.cssMode && (b(e.wrapperEl, "--swiper-centered-offset-before", ""), b(e.wrapperEl, "--swiper-centered-offset-after", ""));
       var E = i.grid && i.grid.rows > 1 && e.grid;
       var y;
       E && e.grid.initSlides(p);
@@ -1120,7 +1120,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         slidesGrid: h,
         slidesSizesGrid: f
       }), i.centeredSlides && i.cssMode && !i.centeredSlidesBounds) {
-        w(e.wrapperEl, "--swiper-centered-offset-before", -u[0] + "px"), w(e.wrapperEl, "--swiper-centered-offset-after", e.size / 2 - f[f.length - 1] / 2 + "px");
+        b(e.wrapperEl, "--swiper-centered-offset-before", -u[0] + "px"), b(e.wrapperEl, "--swiper-centered-offset-after", e.size / 2 - f[f.length - 1] / 2 + "px");
 
         var _t19 = -e.snapGrid[0],
             _s20 = -e.slidesGrid[0];
@@ -1132,7 +1132,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         });
       }
 
-      p !== d && e.emit("slidesLengthChange"), u.length !== v && (e.params.watchOverflow && e.checkOverflow(), e.emit("snapGridLengthChange")), h.length !== b && e.emit("slidesGridLengthChange"), i.watchSlidesProgress && e.updateSlidesOffset();
+      p !== d && e.emit("slidesLengthChange"), u.length !== v && (e.params.watchOverflow && e.checkOverflow(), e.emit("snapGridLengthChange")), h.length !== w && e.emit("slidesGridLengthChange"), i.watchSlidesProgress && e.updateSlidesOffset();
     },
     updateAutoHeight: function updateAutoHeight(e) {
       var t = this,
@@ -1349,8 +1349,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         if (!r.allowSlidePrev && v > r.translate && v > r.maxTranslate() && (p || 0) !== a) return !1;
       }
 
-      var w;
-      if (w = a > p ? "next" : a < p ? "prev" : "reset", u && -v === r.translate || !u && v === r.translate) return r.updateActiveIndex(a), l.autoHeight && r.updateAutoHeight(), r.updateSlidesClasses(), "slide" !== l.effect && r.setTranslate(v), "reset" !== w && (r.transitionStart(s, w), r.transitionEnd(s, w)), !1;
+      var b;
+      if (b = a > p ? "next" : a < p ? "prev" : "reset", u && -v === r.translate || !u && v === r.translate) return r.updateActiveIndex(a), l.autoHeight && r.updateAutoHeight(), r.updateSlidesClasses(), "slide" !== l.effect && r.setTranslate(v), "reset" !== b && (r.transitionStart(s, b), r.transitionEnd(s, b)), !1;
 
       if (l.cssMode) {
         var _e32 = r.isHorizontal(),
@@ -1365,7 +1365,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         } else {
           var _h$scrollTo;
 
-          if (!r.support.smoothScroll) return b({
+          if (!r.support.smoothScroll) return w({
             swiper: r,
             targetPosition: _s24,
             side: _e32 ? "left" : "top"
@@ -1376,8 +1376,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         return !0;
       }
 
-      return 0 === t ? (r.setTransition(0), r.setTranslate(v), r.updateActiveIndex(a), r.updateSlidesClasses(), r.emit("beforeTransitionStart", t, i), r.transitionStart(s, w), r.transitionEnd(s, w)) : (r.setTransition(t), r.setTranslate(v), r.updateActiveIndex(a), r.updateSlidesClasses(), r.emit("beforeTransitionStart", t, i), r.transitionStart(s, w), r.animating || (r.animating = !0, r.onSlideToWrapperTransitionEnd || (r.onSlideToWrapperTransitionEnd = function (e) {
-        r && !r.destroyed && e.target === this && (r.$wrapperEl[0].removeEventListener("transitionend", r.onSlideToWrapperTransitionEnd), r.$wrapperEl[0].removeEventListener("webkitTransitionEnd", r.onSlideToWrapperTransitionEnd), r.onSlideToWrapperTransitionEnd = null, delete r.onSlideToWrapperTransitionEnd, r.transitionEnd(s, w));
+      return 0 === t ? (r.setTransition(0), r.setTranslate(v), r.updateActiveIndex(a), r.updateSlidesClasses(), r.emit("beforeTransitionStart", t, i), r.transitionStart(s, b), r.transitionEnd(s, b)) : (r.setTransition(t), r.setTranslate(v), r.updateActiveIndex(a), r.updateSlidesClasses(), r.emit("beforeTransitionStart", t, i), r.transitionStart(s, b), r.animating || (r.animating = !0, r.onSlideToWrapperTransitionEnd || (r.onSlideToWrapperTransitionEnd = function (e) {
+        r && !r.destroyed && e.target === this && (r.$wrapperEl[0].removeEventListener("transitionend", r.onSlideToWrapperTransitionEnd), r.$wrapperEl[0].removeEventListener("webkitTransitionEnd", r.onSlideToWrapperTransitionEnd), r.onSlideToWrapperTransitionEnd = null, delete r.onSlideToWrapperTransitionEnd, r.transitionEnd(s, b));
       }), r.$wrapperEl[0].addEventListener("transitionend", r.onSlideToWrapperTransitionEnd), r.$wrapperEl[0].addEventListener("webkitTransitionEnd", r.onSlideToWrapperTransitionEnd))), !0;
     },
     slideToLoop: function slideToLoop() {
@@ -1586,11 +1586,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     o.currentX = "touchstart" === c.type ? c.targetTouches[0].pageX : c.pageX, o.currentY = "touchstart" === c.type ? c.targetTouches[0].pageY : c.pageY;
     var g = o.currentX,
         v = o.currentY,
-        w = l.edgeSwipeDetection || l.iOSEdgeSwipeDetection,
-        b = l.edgeSwipeThreshold || l.iOSEdgeSwipeThreshold;
+        b = l.edgeSwipeDetection || l.iOSEdgeSwipeDetection,
+        w = l.edgeSwipeThreshold || l.iOSEdgeSwipeThreshold;
 
-    if (w && (g <= b || g >= n.innerWidth - b)) {
-      if ("prevent" !== w) return;
+    if (b && (g <= w || g >= n.innerWidth - w)) {
+      if ("prevent" !== b) return;
       e.preventDefault();
     }
 
@@ -1656,10 +1656,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     s.allowClick = !1, !r.cssMode && d.cancelable && d.preventDefault(), r.touchMoveStopPropagation && !r.nested && d.stopPropagation(), n.isMoved || (r.loop && !r.cssMode && s.loopFix(), n.startTranslate = s.getTranslate(), s.setTransition(0), s.animating && s.$wrapperEl.trigger("webkitTransitionEnd transitionend"), n.allowMomentumBounce = !1, !r.grabCursor || !0 !== s.allowSlideNext && !0 !== s.allowSlidePrev || s.setGrabCursor(!0), s.emit("sliderFirstMove", d)), s.emit("sliderMove", d), n.isMoved = !0;
     var v = s.isHorizontal() ? f : g;
     a.diff = v, v *= r.touchRatio, l && (v = -v), s.swipeDirection = v > 0 ? "prev" : "next", n.currentTranslate = v + n.startTranslate;
-    var w = !0,
-        b = r.resistanceRatio;
+    var b = !0,
+        w = r.resistanceRatio;
 
-    if (r.touchReleaseOnEdges && (b = 0), v > 0 && n.currentTranslate > s.minTranslate() ? (w = !1, r.resistance && (n.currentTranslate = s.minTranslate() - 1 + Math.pow(-s.minTranslate() + n.startTranslate + v, b))) : v < 0 && n.currentTranslate < s.maxTranslate() && (w = !1, r.resistance && (n.currentTranslate = s.maxTranslate() + 1 - Math.pow(s.maxTranslate() - n.startTranslate - v, b))), w && (d.preventedByNestedSwiper = !0), !s.allowSlideNext && "next" === s.swipeDirection && n.currentTranslate < n.startTranslate && (n.currentTranslate = n.startTranslate), !s.allowSlidePrev && "prev" === s.swipeDirection && n.currentTranslate > n.startTranslate && (n.currentTranslate = n.startTranslate), s.allowSlidePrev || s.allowSlideNext || (n.currentTranslate = n.startTranslate), r.threshold > 0) {
+    if (r.touchReleaseOnEdges && (w = 0), v > 0 && n.currentTranslate > s.minTranslate() ? (b = !1, r.resistance && (n.currentTranslate = s.minTranslate() - 1 + Math.pow(-s.minTranslate() + n.startTranslate + v, w))) : v < 0 && n.currentTranslate < s.maxTranslate() && (b = !1, r.resistance && (n.currentTranslate = s.maxTranslate() + 1 - Math.pow(s.maxTranslate() - n.startTranslate - v, w))), b && (d.preventedByNestedSwiper = !0), !s.allowSlideNext && "next" === s.swipeDirection && n.currentTranslate < n.startTranslate && (n.currentTranslate = n.startTranslate), !s.allowSlidePrev && "prev" === s.swipeDirection && n.currentTranslate > n.startTranslate && (n.currentTranslate = n.startTranslate), s.allowSlidePrev || s.allowSlideNext || (n.currentTranslate = n.startTranslate), r.threshold > 0) {
       if (!(Math.abs(v) > r.threshold || n.allowThresholdMove)) return void (n.currentTranslate = n.startTranslate);
       if (!n.allowThresholdMove) return n.allowThresholdMove = !0, a.startX = a.currentX, a.startY = a.currentY, n.currentTranslate = n.startTranslate, void (a.diff = s.isHorizontal() ? a.currentX - a.startX : a.currentY - a.startY);
     }
@@ -2007,7 +2007,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           if (0 === t) l[_e43 ? "scrollLeft" : "scrollTop"] = -c;else {
             var _l$scrollTo;
 
-            if (!r.support.smoothScroll) return b({
+            if (!r.support.smoothScroll) return w({
               swiper: r,
               targetPosition: -c,
               side: _e43 ? "left" : "top"
@@ -2954,6 +2954,32 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     });
   }
 
+  var J = /*#__PURE__*/function () {
+    function J(e, t) {
+      _classCallCheck(this, J);
+
+      this.burgerMenu = document.querySelector(t), this.burgerBtn = document.querySelector(e);
+    }
+
+    _createClass(J, [{
+      key: "triggerBtn",
+      value: function triggerBtn() {
+        var _this2 = this;
+
+        this.burgerBtn.addEventListener("click", function () {
+          _this2.burgerMenu.classList.toggle("menu__list--active");
+        });
+      }
+    }, {
+      key: "init",
+      value: function init() {
+        this.triggerBtn();
+      }
+    }]);
+
+    return J;
+  }();
+
   window.addEventListener("DOMContentLoaded", function () {
     var _R;
 
@@ -2969,6 +2995,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       bulletClass: "safeness__slider-bullet",
       bulletActiveClass: "safeness__slider-bullet--active",
       clickable: !0
-    }), _R));
+    }), _R)), new J(".burger", ".menu__list").init();
   });
 })();
