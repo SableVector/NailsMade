@@ -48,7 +48,7 @@
         }
 
         &:focus {
-            background-color: darken($color-secondary, 3%);
+            background-color: rgba(darken($color-secondary, 3%), 0.6);
             border-radius: 10px;
             outline: none;
         }

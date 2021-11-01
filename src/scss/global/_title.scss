@@ -62,7 +62,8 @@
 
 .subtitle {
     display: block;
-    margin-top: 20px;
+    max-width: 385px;
+    margin: 20px auto 0;
     font-family: $philosopher;
     font-size: $b * 9;
     font-weight: $fw-bold;

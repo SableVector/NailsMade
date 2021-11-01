@@ -1,0 +1,85 @@
+/* ======================= SAFETY ======================= */
+.safety {
+    padding: 90px 0 100px;
+
+    &-criteria {
+        margin-bottom: 50px;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            &-img {
+                flex-shrink: 0;
+            }
+
+            &-descr {
+                margin-left: 10px;
+            }
+
+            &-title {
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+
+            &-text {
+                line-height: 20 / 16 * 100%;
+            }
+        }
+    }
+
+    &-steps {
+        &__number {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            font-family: $philosopher;
+            font-size: 24px;
+            font-weight: $fw-regular;
+            line-height: 27 / 24 * 100%;
+            color: $color-white;
+            background: $color-main;
+            border-radius: 100%;
+        }
+
+        &__content {
+            margin-left: 20px;
+        }
+
+        &__item {
+            display: flex;
+            align-items: start;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+
+            &-title {
+                margin-bottom: 10px;
+                text-align: left;
+            }
+
+            &-descr {
+                p {
+                    line-height: 20 / 16 * 100%;
+
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 50px;
+        }
+    }
+}
