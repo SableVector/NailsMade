@@ -1,16 +1,18 @@
 // ======================= BURGER =======================
 .burger {
-    display: none;
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 50%;
+    right: 0;
+    z-index: 10;
+    display: none;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
     height: 21px;
     cursor: pointer;
-    transition: transform 0.7s ease-in-out;
-    
+    transition: transform 0.7s ease-in-out, opacity 1s ease-in-out;
+    transform: translateY(-50%);
+
     @media (max-width: $md3+px) {
         display: flex;
     }
@@ -27,6 +29,6 @@
     }
 
     &:hover {
-        transform: rotate(360deg);
+        transform: translateY(-50%) rotate(360deg);
     }
 }

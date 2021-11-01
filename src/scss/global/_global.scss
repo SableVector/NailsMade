@@ -17,6 +17,10 @@ body {
     background: url(../../img/decoration/Ellipse-1.png) left top no-repeat;
     background-color: #fff4e8;
 
+    @media (max-width: $md3+px) {
+        font-size: $b * 7;
+    }
+
     &._lock {
         overflow: hidden;
     }

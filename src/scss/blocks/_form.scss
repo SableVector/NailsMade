@@ -2,6 +2,14 @@
 .form {
     padding: 0 100px;
 
+    @media (max-width: $md3+px) {
+        padding: 0 50px;
+    }
+
+    @media (max-width: 500px) {
+        padding: 0;
+    }
+
     &__body {
         margin: 0 auto;
         text-align: center;
@@ -32,7 +40,11 @@
             font-size: 16px;
             font-weight: $fw-regular;
             line-height: 24 / 16 * 100%;
-            color: lighten($color-main, 10%);
+            color: darken($color-main, 10%);
+
+            @media (max-width: $md3+px) {
+                font-size: 12px;
+            }
         }
 
         &:focus {
@@ -52,10 +64,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__policy {
         line-height: 24 / 16 * 100%;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__policy-link {

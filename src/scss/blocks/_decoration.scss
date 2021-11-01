@@ -1,5 +1,7 @@
 /* ======================= DECORATION ======================= */
 .decoration {
+    z-index: -5;
+
     &-achievements {
         position: absolute;
         top: -230px;

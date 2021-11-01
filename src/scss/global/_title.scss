@@ -29,18 +29,34 @@
 
     &--fs18 {
         font-size: 9 * $b;
+
+        @media (max-width: $md3+px) {
+            font-size: 4 * $b;
+        }
     }
 
     &--fs24 {
         font-size: 12 * $b;
+
+        @media (max-width: $md3+px) {
+            font-size: 8 * $b;
+        }
     }
 
     &--fs36 {
         font-size: 18 * $b;
+
+        @media (max-width: $md3+px) {
+            font-size: 13 * $b;
+        }
     }
 
     &--fs48 {
         font-size: 24 * $b;
+
+        @media (max-width: $md3+px) {
+            font-size: 19 * $b;
+        }
     }
 }
 
@@ -52,4 +68,8 @@
     font-weight: $fw-bold;
     line-height: 20 / 18 * 100%;
     text-align: center;
+
+    @media (max-width: $md3+px) {
+        font-size: $b * 7;
+    }
 }
