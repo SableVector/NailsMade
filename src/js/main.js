@@ -3,7 +3,7 @@ import Burger from './modules/burgerMenu';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-	Swiper.use([Navigation, Pagination]);
+	// Swiper.use([Navigation, Pagination]);
 
 	// const swiper = new Swiper('.swiper', {
 	// 	direction: 'horizontal',

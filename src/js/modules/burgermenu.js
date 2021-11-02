@@ -7,37 +7,37 @@ export default class Burger {
         this.activeClass = activeClass;
     }
 
-    // calcScroll() {
-    //     let div = document.createElement('div');
-    //     div.style.width = '50px';
-    //     div.style.height = '50px';
-    //     div.style.overflowY = 'scroll';
-    //     div.style.visibility = 'hidden';
-    //     document.body.appendChild(div);
+    calcScroll() {
+        let div = document.createElement('div');
+        div.style.width = '50px';
+        div.style.height = '50px';
+        div.style.overflowY = 'scroll';
+        div.style.visibility = 'hidden';
+        document.body.appendChild(div);
 
-    //     let scrollWidth = div.offsetWidth - div.clientWidth;
-    //     div.remove();
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+        div.remove();
 
-    //     return scrollWidth;
+        return scrollWidth;
     
-    // }
+    }
 
     triggerBtn() {
-        const a = this.activeClass.slice(1, this.activeClass.lenght);
-            // scrollWidth = this.calcScroll();
+        const a = this.activeClass.slice(1, this.activeClass.lenght),
+            scrollWidth = this.calcScroll();
 
         this.openMenuBtn.addEventListener('click', () => {
             this.burgerMenu.classList.add(a);
             this.body.style.position = 'fixed';
             this.openMenuBtn.style.opacity = '0';
-            // this.body.style.paddingRight = `${scrollWidth}px`;
+            this.body.style.paddingRight = `${scrollWidth}px`;
         });
 
         this.closeMenuBtn.addEventListener('click', () => {
             this.burgerMenu.classList.remove(a);
             this.body.style.position = '';
             this.openMenuBtn.style.opacity = '';
-            // this.body.style.paddingRight = `${scrollWidth}px`;
+            this.body.style.paddingRight = '';
         });
     }
 

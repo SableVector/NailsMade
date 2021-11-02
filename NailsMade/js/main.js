@@ -22,16 +22,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     _createClass(e, [{
+      key: "calcScroll",
+      value: function calcScroll() {
+        var _e2 = document.createElement("div");
+
+        _e2.style.width = "50px", _e2.style.height = "50px", _e2.style.overflowY = "scroll", _e2.style.visibility = "hidden", document.body.appendChild(_e2);
+        var t = _e2.offsetWidth - _e2.clientWidth;
+        return _e2.remove(), t;
+      }
+    }, {
       key: "triggerBtn",
       value: function triggerBtn() {
         var _this = this;
 
-        var _e2 = this.activeClass.slice(1, this.activeClass.lenght);
+        var _e3 = this.activeClass.slice(1, this.activeClass.lenght),
+            t = this.calcScroll();
 
         this.openMenuBtn.addEventListener("click", function () {
-          _this.burgerMenu.classList.add(_e2), _this.body.style.position = "fixed", _this.openMenuBtn.style.opacity = "0";
+          _this.burgerMenu.classList.add(_e3), _this.body.style.position = "fixed", _this.openMenuBtn.style.opacity = "0", _this.body.style.paddingRight = "".concat(t, "px");
         }), this.closeMenuBtn.addEventListener("click", function () {
-          _this.burgerMenu.classList.remove(_e2), _this.body.style.position = "", _this.openMenuBtn.style.opacity = "";
+          _this.burgerMenu.classList.remove(_e3), _this.body.style.position = "", _this.openMenuBtn.style.opacity = "", _this.body.style.paddingRight = "";
         });
       }
     }, {
@@ -45,7 +55,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   }();
 
   window.addEventListener("DOMContentLoaded", function () {
-    Swiper.use([Navigation, Pagination]), new e({
+    new e({
       openMenuBtn: ".burger",
       closeMenuBtn: ".btn__menu-close",
       burgerMenuSelector: ".menu",
