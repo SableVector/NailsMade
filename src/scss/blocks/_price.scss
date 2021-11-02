@@ -1,0 +1,118 @@
+/* ======================= PRICE ======================= */
+
+.price {
+    padding: 100px 0;
+
+    @media (max-width: $md3+px) {
+        padding: 40px 0;
+    }
+
+    &-content {
+        // &__list {
+        // }
+
+        // &__item {
+        // }
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+            stroke: $color-text;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 950px;
+            padding: 8px 20px;
+            margin: 0 auto;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $color-main;
+            transition: all 0.3s ease-in-out;
+
+            &:not(:last-child) {
+                margin-top: 24px;
+            }
+
+            &--active {
+                color: $color-main;
+
+                .price-content__icon {
+                    stroke: $color-main;
+                    transform: rotate(90deg);
+                }
+            }
+
+            @media (min-width: $md3+px) {
+                &:hover,
+                &:focus {
+                    color: $color-main;
+
+                    .price-content__icon {
+                        stroke: $color-main;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        &__table-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+
+            &--active {
+                max-height: fit-content;
+                overflow: visible;
+                opacity: 1;
+            }
+        }
+
+        &__table {
+            width: 100%;
+            max-width: 906px;
+            max-height: 0;
+            padding: 20px 35px;
+            margin: 0 auto;
+            line-height: 20 / 16 * 100%;
+            color: $color-white;
+            background: $color-main;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+            @media (max-width: 500px) {
+                padding: 10px 5px;
+                font-size: 10px;
+            }
+
+            thead {
+                margin-bottom: 18px;
+
+                th {
+                    padding: 0 5px;
+                    font-weight: $fw-bold;
+
+                    &:not(:first-child) {
+                        text-align: center;
+                    }
+                }
+            }
+
+            tbody {
+                td {
+                    padding: 9px 5px;
+
+                    &:not(:first-child) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
